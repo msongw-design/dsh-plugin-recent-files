@@ -1,0 +1,45 @@
+{
+  "name": "dsh-plugin-recent-files",
+  "version": "0.1.0",
+  "description": "Sidebar entry and main panel listing recently opened file artifacts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msongw-design/dsh-plugin-recent-files.git"
+  },
+  "homepage": "https://github.com/msongw-design/dsh-plugin-recent-files#readme",
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "recent-files"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4"
+  }
+}

@@ -1,0 +1,9 @@
+# The recent-files bundle: one browser row adding the "最近浏览" sidebar entry
+# and the main panel listing recently opened file artifacts.
+#
+# The row names this package itself, so `dsh.client` in package.json supplies
+# the browser half (lib/client.js) and lib/index.js is the empty node half.
+
+- insert:
+    - id: ui-recent-files
+      name: 'dsh-plugin-recent-files'
