@@ -46,7 +46,12 @@ Entries persist in `localStorage` under `dsh.recent-files.v1` as `{ address, ses
 
 ## Compatibility
 
-Verified against **DSH 0.2.0-rc.2** (macOS desktop profile). The plugin registers only the `sidebar.panellist` and `main` slots and imports no private module internals.
+| DSH version | Status |
+|---|---|
+| 0.2.0-rc.2 | developed and first verified |
+| 0.2.1-rc.3 | confirmed: both slots (`sidebar.panellist`, `main`) and the static `@deepseek-ai/dsh-client-ui-primitives` module table (`FileTypeIcon`, `relativeTime`, icons) are unchanged |
+
+The plugin registers only those two slots and imports no private module internals.
 
 ## Development
 

@@ -58,7 +58,12 @@ pnpm add /path/to/dsh-plugin-recent-files
 
 ## 兼容性
 
-在 **DSH 0.2.0-rc.2**（macOS desktop profile）验证通过。插件只注册 `sidebar.panellist` 与 `main` 两个槽位，不依赖未公开的内部模块；上游改动这两个槽位的契约时才需要跟进。
+| DSH 版本 | 状态 |
+|---|---|
+| 0.2.0-rc.2 | 开发与首次验证 |
+| 0.2.1-rc.3 | 已确认：`sidebar.panellist`、`main` 两个槽位仍在，`@deepseek-ai/dsh-client-ui-primitives` 仍是静态模块表的一员（`FileTypeIcon`、`relativeTime` 等 API 未变） |
+
+插件只注册这两个槽位，不依赖未公开的内部模块；上游改动槽位契约时才需要跟进。
 
 ## 开发
 
